@@ -44,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\CustomIteratorList.cs" />
+    <Compile Include="Entities\CustomLinkedList.cs" />
     <Compile Include="Entities\Graph.cs" />
     <Compile Include="Entities\InsertionSort.cs" />
     <Compile Include="Entities\MathSet.cs" />
     <Compile Include="Entities\PalindromeChecker.cs" />
     <Compile Include="Entities\SortedListWithArray.cs" />
     <Compile Include="Entities\SortedListWithArrayList.cs" />
+    <Compile Include="Entities\VisitDeterminator.cs" />
     <Compile Include="Entities\WorldPopulationCounter.cs" />
     <Compile Include="Interfaces\IPrintable.cs" />
     <Compile Include="Interfaces\IPrinter.cs" />

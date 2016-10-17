@@ -17,7 +17,7 @@ namespace InterviewPrep.Entities
                 while (j > 0)
                 {
                     if (array[j - 1] > array[j])
-                    {
+                    { 
                         int temp = array[j - 1];
 
                         array[j - 1] = array[j];

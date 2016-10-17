@@ -10,25 +10,22 @@ namespace InterviewPrep.Entities
     {
         public static void Sort(int[] array)
         {
-            for (int i = 0; i < array.Length; i ++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for (int j = i; j < array.Length; j ++)
+                int j = i + 1;
+
+                while (j > 0)
                 {
-                    if (j < 0)
+                    if (array[j - 1] > array[j])
                     {
-                        break;
+                        int temp = array[j - 1];
+
+                        array[j - 1] = array[j];
+
+                        array[j] = temp;
                     }
 
-                    if (array[i] > array[j])
-                    {
-                        int holder = array[i];
-
-                        array[i] = array[j];
-
-                        array[j] = holder;
-
-                        j --;
-                    }
+                    j--;
                 }
             }
         }

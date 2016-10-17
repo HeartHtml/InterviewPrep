@@ -16,13 +16,14 @@ namespace InterviewPrep
 
             InterviewPrepApplication app = new InterviewPrepApplication(printer)
             {
-                RunCustomIteratorDemo = true,
-                RunGraphDemo = true,
-                RunSortedArrayDemo = true,
-                RunSortedListDemo = true,
-                RunPalindromeDemo = true,
-                RunWorldPopulationCounter = true,
-                RunSetDemo = true
+                RunCustomIteratorDemo = false,
+                RunGraphDemo = false,
+                RunSortedArrayDemo = false,
+                RunSortedListDemo = false,
+                RunPalindromeDemo = false,
+                RunWorldPopulationCounter = false,
+                RunSetDemo = false,
+                RunInsertionSort =  true
             };
 
             app.RunDemo();

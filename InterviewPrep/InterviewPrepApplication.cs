@@ -26,6 +26,8 @@ namespace InterviewPrep
 
         public bool RunSetDemo { get; set; }
 
+        public bool RunInsertionSort { get; set; }
+
         public InterviewPrepApplication(IPrinter printer)
         {
             Printer = printer;
@@ -196,6 +198,18 @@ namespace InterviewPrep
                 set.Add(98);
 
                 Printer.PrintToMedium(set.Print());
+            }
+
+            if (RunInsertionSort)
+            {
+                int[] array = new int[] { 1, 10, 56, -45, 89, 4, -976, 100, 45 };
+
+                InsertionSort.Sort(array);
+
+                foreach (int i in array)
+                {
+                    Console.WriteLine(i);
+                }
             }
         }
     }

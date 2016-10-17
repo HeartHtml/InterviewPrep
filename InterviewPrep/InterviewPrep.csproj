@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\CustomIteratorList.cs" />
     <Compile Include="Entities\Graph.cs" />
+    <Compile Include="Entities\InsertionSort.cs" />
     <Compile Include="Entities\MathSet.cs" />
     <Compile Include="Entities\PalindromeChecker.cs" />
     <Compile Include="Entities\SortedListWithArray.cs" />

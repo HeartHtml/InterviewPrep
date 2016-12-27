@@ -48,6 +48,7 @@
     <Compile Include="Entities\Graph.cs" />
     <Compile Include="Entities\InsertionSort.cs" />
     <Compile Include="Entities\MathSet.cs" />
+    <Compile Include="Entities\NumberPairsChecker.cs" />
     <Compile Include="Entities\PalindromeChecker.cs" />
     <Compile Include="Entities\SortedListWithArray.cs" />
     <Compile Include="Entities\SortedListWithArrayList.cs" />

@@ -23,7 +23,8 @@ namespace InterviewPrep
                 RunPalindromeDemo = false,
                 RunWorldPopulationCounter = false,
                 RunSetDemo = false,
-                RunInsertionSort =  true
+                RunInsertionSort =  false,
+                RunNumberPairsDemo = true
             };
 
             app.RunDemo();

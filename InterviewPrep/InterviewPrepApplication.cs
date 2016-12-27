@@ -28,6 +28,8 @@ namespace InterviewPrep
 
         public bool RunInsertionSort { get; set; }
 
+        public bool RunNumberPairsDemo { get; set; }
+
         public InterviewPrepApplication(IPrinter printer)
         {
             Printer = printer;
@@ -210,6 +212,29 @@ namespace InterviewPrep
                 {
                     Console.WriteLine(i);
                 }
+            }
+
+            if (RunNumberPairsDemo)
+            {
+                List<int> testList = new List<int>();
+
+                testList.Add(6);
+
+                testList.Add(1);
+
+                testList.Add(3);
+
+                testList.Add(46);
+
+                testList.Add(1);
+
+                testList.Add(3);
+
+                testList.Add(9);
+
+                int numberOfPairs = NumberPairsChecker.NumberOfPairs(testList.ToArray(), 47);
+
+                Printer.PrintToMedium(numberOfPairs.ToString());
             }
         }
     }

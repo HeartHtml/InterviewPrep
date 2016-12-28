@@ -26,8 +26,12 @@ namespace InterviewPrep.Entities
 
                     while (true)
                     {
+                        bool moveDown = false;
+
                         if (CanMoveDown(xIndex, yIndex, matrix))
                         {
+                            moveDown = true;
+
                             pathKeeper.Push(new Tuple<int, int>(xIndex + 1, yIndex));
                         }
 
@@ -51,7 +55,17 @@ namespace InterviewPrep.Entities
                                 break;
                             }
 
-                            Tuple<int, int> nextPotentialPoint = pathKeeper.Pop();
+                            if (!moveDown && path.Count > 0)
+                            {
+                                path.RemoveAt(path.Count - 1);
+                            }
+
+                            Tuple<int, int> nextPotentialPoint = null;
+
+                            if (pathKeeper.Count > 0)
+                            {
+                                nextPotentialPoint = pathKeeper.Pop();
+                            }
 
                             if (nextPotentialPoint == null)
                             {

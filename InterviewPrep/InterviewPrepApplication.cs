@@ -30,6 +30,10 @@ namespace InterviewPrep
 
         public bool RunNumberPairsDemo { get; set; }
 
+        public bool RunExpressionValidatorDemo { get; set; }
+
+        public bool RunPathFinderDemo { get; set; }
+
         public InterviewPrepApplication(IPrinter printer)
         {
             Printer = printer;
@@ -235,6 +239,80 @@ namespace InterviewPrep
                 int numberOfPairs = NumberPairsChecker.NumberOfPairs(testList.ToArray(), 47);
 
                 Printer.PrintToMedium(numberOfPairs.ToString());
+            }
+
+            if(RunExpressionValidatorDemo)
+            {
+                string expression1 = "{[()]}"; //valid
+                string expression2 = "{{{}}}"; //valid
+                string expression3 = "([({})])"; //valid
+                string expression4 = "(()))"; //valid
+                string expression5 = "AAAA"; //invalid
+                string expression6 = "]]]";
+                string expression7 = "}}}";
+                string expression8 = "}";
+                string expression9 = "{{{}}}]";
+                string expression10 = "{";
+
+                List<string> expressions = new List<string>
+                { expression1, expression2, expression3, expression4, expression5, expression6, expression7, expression8, expression9, expression10};
+
+                for (int i = 0; i < expressions.Count; i++)
+                {
+                    Printer.PrintToMedium(
+                        $"Expression {i + 1} - {expressions[i]} is: {(ExpressionValidator.Validate(expressions[i]) ? "Valid" : "Invalid")}");
+                }
+            }
+
+            if (RunPathFinderDemo)
+            {
+                int[][] matrix1 = {
+                    new[] {1, 0, 1, 0},
+                    new[] {1, 1, 0, 0},
+                    new[] {0, 1, 1, 0},
+                    new[] {1, 1, 1, 1},
+                };
+
+                int[][] matrix2 = {
+                    new[] {1, 0, 1, 0},
+                    new[] {1, 1, 1, 0},
+                    new[] {0, 1, 0, 0},
+                    new[] {1, 1, 1, 1},
+                };
+
+                int[][] matrix3 = {
+                    new[] {1, 1, 1, 1},
+                    new[] {1, 1, 1, 1},
+                    new[] {1, 1, 1, 1},
+                    new[] {1, 1, 1, 1},
+                };
+
+                List<Tuple<int, int>> path = PathFinder.FindPath(matrix1);
+
+                Printer.PrintToMedium($"Path for Matrix 1 is");
+
+                foreach (Tuple<int, int> tuple in path)
+                {
+                    Printer.PrintToMedium($"({tuple.Item1}, {tuple.Item2})");
+                }
+
+                path = PathFinder.FindPath(matrix2);
+
+                Printer.PrintToMedium($"Path for Matrix 2 is");
+
+                foreach (Tuple<int, int> tuple in path)
+                {
+                    Printer.PrintToMedium($"({tuple.Item1}, {tuple.Item2})");
+                }
+
+                path = PathFinder.FindPath(matrix3);
+
+                Printer.PrintToMedium($"Path for Matrix 3 is");
+
+                foreach (Tuple<int, int> tuple in path)
+                {
+                    Printer.PrintToMedium($"({tuple.Item1}, {tuple.Item2})");
+                }
             }
         }
     }

@@ -24,7 +24,9 @@ namespace InterviewPrep
                 RunWorldPopulationCounter = false,
                 RunSetDemo = false,
                 RunInsertionSort =  false,
-                RunNumberPairsDemo = true
+                RunNumberPairsDemo = false,
+                RunExpressionValidatorDemo = false,
+                RunPathFinderDemo = true
             };
 
             app.RunDemo();
